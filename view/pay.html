@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>changeApp</title>
+	<meta charset="utf-8">
+	<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/changeapp/static/css/style.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_5y2pmci9rrvsra4i.css">
+	<script type="text/javascript" src="/changeapp/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div class="sign-login-contianer">
+	<div class="login-box">
+		<div class="login-header">
+			<a href="javascript:void();" onclick="window.history.go(-1);">返回</a>
+			<p>账单</p>
+		</div>
+	</div>
+	<div class="pay-contianer">
+		<div class="address">
+			<div class="head clearfix">
+				<span>收货地址</span>
+				<a href="/changeapp/setting.php?act=address">修改>></a>
+			</div>
+			<div class="content">
+				<div class="name">
+					<span>收货人：</span>
+					<span><?php echo $address['name']?></span>
+				</div>
+				<div class="phone">
+					<span>电话号码：</span>
+					<span><?php echo $address['phone']?></span>
+				</div>
+				<div class="address">
+					<span>收货地址：</span>
+					<span><?php echo $address['detail_add']?></span>
+				</div>
+			</div>
+		</div>
+		<div class="pay-method">
+			<div class="head">
+				<span>支付方式</span>
+			</div>
+			<div class="content">
+				<label><input type="radio" name="pay" checked="true" /><span><i class="iconfont icon-zhifu"></i>404银行</span></label>
+				<label><input type="radio" name="pay" /><span><i class="iconfont icon-zhifubao1"></i>支付宝</span></label>
+				<label><input type="radio" name="pay" /><span><i class="iconfont icon-caifutong"></i>财付通</span></label>
+			</div>
+		</div>
+		<div class="cash-coupon">
+			<div class="head">
+				<span>代金卷</span>
+			</div>
+			<div class="content">
+				<input type="text" name="" placeholder="请输入代金卷号码">
+				<a href="">激活</a>
+			</div>
+		</div>
+		<div class="order">
+			<div class="head">
+				<span>订单金额</span>
+			</div>
+			<div class="content">
+				<div class="goods-money">
+					<span>商品金额:</span>
+					<span><?php echo $tprice;?>元</span>
+				</div>
+				<div class="fire-money">
+					<span>运费:</span>
+					<span>￥5元</span>
+				</div>
+				<div class="total-money">
+					<span>总金额:</span>
+					<span><?php echo $tprice+5;?>元</span>
+				</div>
+			</div> 
+		</div>
+		<div class="remarks">
+			<div class="content">
+				<textarea placeholder="备注留言"></textarea>
+			</div>
+		</div>
+		<div class="pay-submit">
+			<a href="">提交</a>
+		</div>
+	</div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+	<div class="footer-contianer clearfix">
+		<div>
+			<a href="/changeapp/index.php">
+				<i class="iconfont icon-shouye-shouye"></i>
+				<span>首页</span>
+			</a>
+		</div>
+		<div>
+			<a href="/changeapp/sort.php">
+				<i class="iconfont icon-fenlei"></i>
+				<span>分类</span>	
+			</a>
+		</div>
+		<div>
+			<a href="/changeapp/find.php">
+				<i class="iconfont icon-faxian1"></i>
+				<span>发现</span>
+			</a>
+		</div>
+		<div>
+			<a href="/changeapp/cart.php">
+				<i class="iconfont icon-gouwuche"></i>
+				<span>购物车</span>
+			</a>	
+		</div>
+		<div>
+			<a href="/changeapp/personal.php">
+				<i class="iconfont icon-my" style="color:red;"></i>
+				<span style="color:red;">我的</span>			
+			</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/changeapp/static/js/dialog.js"></script>
+<script type="text/javascript" src="/changeapp/static/js/global.js"></script>
+</body>
+</html>

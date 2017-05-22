@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>changeApp</title>
+	<meta charset="utf-8">
+	<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_9aeyrxv2ljvy4x6r.css">
+	<script type="text/javascript" src="static/js/jquery-1.11.3.js"></script>	
+</head>
+<body> 
+<!-- 个人中心 -->
+	<div class="personal-contianer">
+		<div class="bg-contianer">
+			<div class="img">
+				<img src="static/images/green.my.jpg">
+			</div>
+			<div class="personal-setting">
+				<a href="view/setting.html"><i class="iconfont icon-shezhi"></i></a>
+				<i class="iconfont icon-xiaoxi1"></i>
+			</div>
+			<div class="personal-heads"></div>
+			<div class="personal-name">欢迎回来,<span style="color:#FF5722"><?php echo isset($_SESSION['username'])?$_SESSION['username']:""?></span> 用户</div>
+		</div>
+		<div class="order-contianer">
+			<div class="my-order">
+				<div class="order">
+					<i class="iconfont icon-iconwd"></i>
+					<span>我的订单</span>
+				</div>
+				<div class="order-all">
+					<span>查看全部</span>
+					<i class="iconfont icon-xiangyou"></i>
+				</div>
+			</div>
+			<div class="order-info">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="iconfont icon-daifukuan" style="margin-bottom: 5px;"></i>
+							<span>待付款</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="iconfont icon-daishouhuo"></i>
+							<span>待收货</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="iconfont icon-daipingjia"></i>
+							<span>待评价</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="iconfont icon-icon042" style="margin-bottom: 5px;"></i>
+							<span>退换货</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="wallert-contianer">
+			<div class="my-wallert">
+				<div class="wallert">
+					<i class="iconfont icon-wodeqianbao"></i>
+					<span>我的钱包</span>
+				</div>
+				<div class="wallert-more">
+					<span>更多信息</span>
+					<i class="iconfont icon-xiangyou"></i>
+				</div>
+			</div>
+			<div class="wallert-info">
+				<ul>
+					<li>
+						<a href="#">
+							<i >￥0.00</i>
+							<span>账户余额</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i >0</i>
+							<span>优惠劵</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i>0</i>
+							<span>积分</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i>0</i>
+							<span>下单数量</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- 底部 -->
+<div class="footer">
+	<div class="footer-contianer clearfix">
+		<div>
+			<a href="index.php">
+				<i class="iconfont icon-shouye-shouye"></i>
+				<span>首页</span>
+			</a>
+		</div>
+		<div>
+			<a href="sort.php">
+				<i class="iconfont icon-fenlei"></i>
+				<span>分类</span>	
+			</a>
+		</div>
+		<div>
+			<a href="find.php">
+				<i class="iconfont icon-faxian1"></i>
+				<span>发现</span>
+			</a>
+		</div>
+		<div>
+			<a href="cart.php">
+				<i class="iconfont icon-gouwuche"></i>
+				<span>购物车</span>
+			</a>	
+		</div>
+		<div>
+			<a href="personal.php">
+				<i class="iconfont icon-my"></i>
+				<span>我的</span>			
+			</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="static/js/dialog.js"></script>
+<script type="text/javascript" src="static/js/global.js"></script>
+</body>
+</html>

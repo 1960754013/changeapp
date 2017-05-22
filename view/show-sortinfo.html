@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>changeApp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_sfr8ivl2khme7b9.css">
+    <link rel="stylesheet" href="static/css/swiper.css">
+	<script type="text/javascript" src="static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div class="sign-login-contianer">
+  <div class="login-box">
+    <div class="login-header clearfix">
+      <a href="javascript:history.back();">返回</a>
+      <p>商品详情</p>
+      <a href="search.php" style="position: absolute;top:14px;right:10px;border: none;padding: 0px;"><i class="iconfont icon-sousuo-sousuo"></i></a>
+    </div>
+  </div>
+</div>
+<div class="show-cartinfo-contianer">
+    <div class="nav">
+        <div class="swiper-container">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="static/images/bg.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="static/images/bg.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="static/images/bg.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="static/images/bg.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="static/images/bg.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="show-cartinfo-name">
+        <p><?php echo isset($data['goods_name'])?$data['goods_name']:"" ; ?></p>
+        <p><span><?php echo isset($data['goods_name'])?$data['goods_price']:"" ; ?></span>元</p>
+    </div>
+    <div class="show-cartinfo-operate clearfix">
+        <div class="save">
+            <a href=""><i class="iconfont icon-shoucang1"></i>收藏</a>
+        </div>
+        <div class="buy">
+            <a href=""><i class="iconfont icon-gouwuche1"></i>加入购物车</a>
+        </div>
+    </div>
+    <div class="detail-info">
+        <div class="detail-info-title">
+            <p>商品规格</p>
+            <i class="iconfont"></i>
+        </div>
+        <div class="detail-info-content">
+            <div class="clearfix detail-id">
+                <span>商品编号</span>：
+                <span><?php echo isset($detail_id)?$detail_id:"" ;?></span>
+            </div>
+            <div class="pinpai clearfix">
+                <span>品牌</span>：
+                <span><?php echo isset($data['goods_info'])?$data['goods_info']:""; ?></span>
+            </div>
+            <div class="made-addr clearfix">
+                <span>产地</span>：
+                <span><?php echo isset($data['goods_made'])?$data['goods_made']:""; ?></span>
+            </div>
+            <div class="weight clearfix">
+                <span>含净量</span>：
+                <span><?php echo isset($data['goods_weight'])?$data['goods_weight']:""; ?></span>
+            </div>
+        </div>
+    </div>
+    <div class="detail-descript">
+        <div class="descript-title">
+            <p>商品详情</p>
+        </div>
+    </div>
+    <div class="detail-commend">
+        <div class="commend-title">
+            <p>全部评论</p>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer-contianer clearfix">
+        <div>
+            <a href="index.php">
+                <i class="iconfont icon-shouye-shouye"></i>
+                <span>首页</span>
+            </a>
+        </div>
+        <div>
+            <a href="sort.php">
+                <i class="iconfont icon-fenlei"></i>
+                <span>分类</span> 
+            </a>
+        </div>
+        <div>
+            <a href="find.php">
+                <i class="iconfont icon-faxian1"></i>
+                <span>发现</span>
+            </a>
+        </div>
+        <div>
+            <a href="cart.php">
+                <i class="iconfont icon-gouwuche"></i>
+                <span>购物车</span>
+            </a>    
+        </div>
+        <div>
+            <a href="personal.php">
+                <i class="iconfont icon-my"></i>
+                <span>我的</span>         
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="static/js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween:0,
+        centeredSlides: true,
+        autoplay:5000,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+<script type="text/javascript" src="static/js/dialog.js"></script>
+<script type="text/javascript" src="static/js/global.js"></script>
+</html>

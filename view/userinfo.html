@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>changeApp</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/changeapp/static/css/style.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_iblz9vvmlipy14i.css">
+	<script type="text/javascript" src="/changeapp/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div class="sign-login-contianer">
+	<div class="login-box">
+		<div class="login-header">
+			<a href="/changeapp/view/setting.html">返回</a>
+			<p>会员信息</p>
+		</div>
+	</div>
+	<div class="userinfo-contianer">
+		<div class="show-error-info"></div>
+		<div class="userinfo-box">
+			<form>
+				<div class="userinfo-content">
+					<div class="name">
+						<span style="letter-spacing:0px;">真实姓名:</span>
+						<input type="text" name="name" value="<?php echo isset($data['name'])?$data['name']:''?>"/>
+
+					</div>
+					<?php
+					if(isset($data['sex'])&& $data['sex']=='女'){
+					?>
+					<div class="sex">
+						<span>性别:</span>
+						<label><input type="radio" name="sex" />男</label>
+						<label><input type="radio" name="sex" checked="true" />女</label>
+					</div>
+					<?php
+					}else{
+					?>
+					<div class="sex">
+						<span>性别:</span>
+						<label><input type="radio" name="sex" checked="true"/>男</label>
+						<label><input type="radio" name="sex" />女</label>
+					</div>
+					
+					<?php
+					}
+					?>
+					<div class="birthday">
+						<span style="letter-spacing:0px;">出生日期:</span>
+						<input type="date" name="birthday" value="<?php echo isset($data['birthday'])?$data['birthday']:''?>" />
+					</div>
+					<div class="phone">
+						<span>手机:</span>
+						<input type="text" name="phone" value="<?php echo isset($data['phone'])?$data['phone']:''?>" />
+					</div>
+					<div class="email">
+						<span>邮箱:</span>
+						<input type="text" name="email" value="<?php echo isset($data['email'])?$data['email']:''?>" />
+					</div>
+					<div class="QQ">
+						<span>QQ:</span>
+						<input type="text" name="qq" value="<?php echo isset($data['QQ'])?$data['QQ']:''?>" />
+					</div>
+				</div>
+				<div class="userinfo-submit">
+					<a href="javascript:void();">保存</a>
+				</div>
+			</form>
+		</div>	
+	</div>
+</div>
+<script type="text/javascript" src="/changeapp/static/js/dialog.js"></script>
+<script type="text/javascript" src="/changeapp/static/js/global.js"></script>
+</body>
+</html>

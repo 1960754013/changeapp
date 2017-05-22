@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>changeApp</title>
+	<meta charset="utf-8">
+	<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" type="text/css" href="/changeapp/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_iblz9vvmlipy14i.css">
+	<script type="text/javascript" src="/changeapp/static/js/jquery-1.11.3.js"></script>
+	<style>
+		.show-error-info{
+	    font-size: 12px;
+	    color: red;
+	    text-align: center;
+	    margin: 5px auto;
+	    background: #fff;
+	    width: 95%;
+	    padding: 5px 0px;
+	    display:none;
+	    border-radius: 2px;
+	    border: 1px solid #f5f4f4;
+	}
+	</style>
+</head>
+<body>
+<!-- 头部 -->
+<div class="sign-login-contianer">
+	<div class="sign-header-box">
+		<div class="sign-header">
+			<a href="javascript:void();" onclick="window.history.go(-1);">返回</a>
+			<p>注册</p>
+		</div>
+	</div>
+
+	<!-- 登录 -->
+	<div class="sign-contianer">
+		<div class="show-error-info">用户名或者密码不正确</div>
+		<div class="sign-box">
+			<form method="post">
+				<div class="sign-content">
+					<div class="sign-username">
+						<span>账号:</span>
+						<input type="text" name="username" placeholder="邮箱/手机" />
+					</div>
+					<div class="sign-password">
+						<span>密码:</span>
+						<input type="password" name="password" placeholder="请输入密码" />
+					</div>
+					<div class="sign-repassword">
+						<span>确认:</span>
+						<input type="password" name="password" placeholder="请再次输入密码" />
+					</div>
+					<div class="sign-identify">
+						<span style="letter-spacing: 1px;margin-left: -4px;">验证码：</span>
+						<input type="text" name="identify"/>
+						<a href="javascript:void();" onclick="refresh();"><img src="/changeapp/code.php"></a>
+					</div>
+				</div>
+				<div class="sign-submit">
+					<input type="submit" value="注册" name="submit"/ >
+				</div>
+			</form>
+		</div>	
+		<div class="go-to-login">
+			<a href="login.html">已有账号，快速登录</a>
+		</div>
+	</div>
+</div>
+<!-- 底部 -->
+<div class="footer">
+	<div class="footer-contianer clearfix">
+		<div>
+			<a href="/changeapp/index.php">
+				<i class="iconfont icon-shouye-shouye"></i>
+				<span>首页</span>
+			</a>
+		</div>
+		<div>
+			<a href="/changeapp/sort.php">
+				<i class="iconfont icon-fenlei"></i>
+				<span>分类</span>	
+			</a>
+		</div>
+		<div>
+			<a href="/changeapp/find.php">
+				<i class="iconfont icon-faxian1"></i>
+				<span>发现</span>
+			</a>
+		</div>
+		<div>
+			<a href="/changeapp/cart.php">
+				<i class="iconfont icon-gouwuche"></i>
+				<span>购物车</span>
+			</a>	
+		</div>
+		<div>
+			<a href="/changeapp/personal.php">
+				<i class="iconfont icon-my" style="color:red;"></i>
+				<span style="color:red;">我的</span>			
+			</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/changeapp/static/js/dialog.js"></script>
+<script type="text/javascript" src="/changeapp/static/js/global.js"></script>
+</body>
+</html>

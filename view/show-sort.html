@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>changeApp</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_fm3u712m81q93sor.css">
+	<script type="text/javascript" src="static/js/jquery-1.11.3.js"></script>
+	
+</head>
+<body>
+<!-- 头部 -->
+<div class="search-contianer">
+	<div class="search-box">
+		<div class="search-header">
+			<a href="javascript:void();" onclick="window.history.go(-1);">返回</a>
+			<span>筛选</span>
+			<p>搜索</p>
+			
+		</div>
+	</div>
+	<!-- 搜索头部 -->
+	<div class="input-search">
+		<div class="search-window">
+			<i class="iconfont icon-sousuo-sousuo"></i>
+			<a href="search.php"><input type="text" placeholder="搜索你想要的食物" /></a>
+		</div>
+	</div>
+	<div class="choose-itme clearfix">
+		<div class="choose-new-item">
+			<span>新品</span>
+			<i class="iconfont icon-xiangxia" style="display:inline-block;color:#f00b0b;"></i>
+			<div class="sanjiaoxing" style="display: block;"></div>
+		</div>
+		<div class="choose-xiaoliang">
+			<span>销量</span>
+			<i class="iconfont icon-xiangxia"></i>
+			<div class="sanjiaoxing"></div>
+		</div>
+		<div class="choose-price">
+			<span>价格</span>
+			<i class="iconfont icon-xiangxia"></i>
+			<div class="sanjiaoxing"></div>
+		</div>
+	</div>
+	<!-- 商品展示 -->
+	<div class="show-item">
+		<div class="show-item-content">
+		<?php
+			if(isset($data) && !empty($data)){
+				foreach($data as $value){
+		?>
+			<ul>
+				<input type="hidden" id="gid" value="<?php echo $value['detail_id']?>" />
+				<li class="show-item-img">
+					<a href="sort.php?act=detail&&detail_id=<?php echo $value['detail_id']?>"><img src="static/images/change/<?php echo $value['goods_img']?>"></a>
+				</li>
+				<li class="operate clearfix">
+					<div class="name">
+						<a href="sort.php?act=detail&&detail_id=<?php echo $value['detail_id']?>"><p><?php echo $value['goods_name'] ?></p></a>
+					</div>
+					<div class="address">
+						<p>产地：<span><?php echo $value['goods_made'] ?></span></p>
+					</div>
+					<div class="price">
+						<span><?php echo $value['goods_price'] ?></span>
+						<i class="iconfont icon-tianjiadaogouwuche buy"></i>
+					</div>
+				</li> 
+			</ul>
+			<?php
+					}
+			}else{
+			?>
+			<ul>
+				<li class="show-item-img">
+					<img src="static/images/change.jpg">
+				</li>
+				<li class="operate clearfix">
+					<div class="name">
+						<p>农夫山泉550ml</p>
+
+					</div>
+					<div class="address">
+						<p>产地：<span>越南</span></p>
+					</div>
+					<div class="price">
+						<span>￥2.20</span>
+						<i class="iconfont icon-tianjiadaogouwuche buy"></i>
+					</div>
+				</li> 
+			</ul>
+			<?php
+				}
+			?>
+		</div>
+	</div>
+</div>
+<!-- 底部 -->
+<div class="footer">
+	<div class="footer-contianer clearfix">
+		<div>
+			<a href="index.php">
+				<i class="iconfont icon-shouye-shouye"></i>
+				<span>首页</span>
+			</a>
+		</div>
+		<div>
+			<a href="sort.php">
+				<i class="iconfont icon-fenlei"></i>
+				<span>分类</span>	
+			</a>
+		</div>
+		<div>
+			<a href="find.php">
+				<i class="iconfont icon-faxian1"></i>
+				<span>发现</span>
+			</a>
+		</div>
+		<div>
+			<a href="cart.php">
+				<i class="iconfont icon-gouwuche"></i>
+				<span>购物车</span>
+			</a>	
+		</div>
+		<div>
+			<a href="personal.php">
+				<i class="iconfont icon-my"></i>
+				<span>我的</span>			
+			</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="static/js/dialog.js"></script>
+<script type="text/javascript" src="static/js/global.js"></script>
+</body>
+</html>
